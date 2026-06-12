@@ -23,7 +23,7 @@ npm run preview
 ```
 betapid-docs/
 ├── public/
-│   └── favicon.svg              # Brand favicon
+│   └── ff.png              # Brand favicon
 ├── src/
 │   ├── components/              # React components
 │   │   ├── ArchDiagram.tsx     # SVG architecture diagram

@@ -23,7 +23,7 @@ export function MarketSection() {
       </h2>
       <div style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr",
+        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
         gap: 12,
         marginBottom: 20,
       }}>
@@ -67,7 +67,7 @@ export function MarketSection() {
               borderRadius: 10,
             }}>
               <div style={{
-                width: 90,
+                minWidth: 80,
                 fontSize: 13,
                 fontWeight: 700,
                 color: c.isUs ? TOKENS.accentSoft : TOKENS.text0,

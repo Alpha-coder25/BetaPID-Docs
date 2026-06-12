@@ -13,7 +13,7 @@ export function SolutionSection() {
         marginBottom: 16,
         letterSpacing: "-0.02em",
       }}>
-        One platform. Every builder.
+        One platform to build, deploy, and operate.
       </h2>
       <Card glow>
         <p style={{ fontSize: 15, lineHeight: 1.75, color: TOKENS.text1, margin: 0 }}>

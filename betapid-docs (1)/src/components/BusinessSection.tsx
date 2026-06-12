@@ -17,7 +17,7 @@ export function BusinessSection() {
       </h2>
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
         gap: 10,
         marginBottom: 20,
       }}>
@@ -42,9 +42,18 @@ export function BusinessSection() {
         <div style={{ fontSize: 13, fontWeight: 700, color: TOKENS.text0, marginBottom: 8 }}>
           Go-To-Market Strategy
         </div>
-        <p style={{ fontSize: 14, color: TOKENS.text1, lineHeight: 1.7, margin: 0 }}>
-          {CONTENT.pitch.gtm}
-        </p>
+        <div style={{ display: "grid", gap: 16 }}>
+          {CONTENT.pitch.gtm.map(phase => (
+            <div key={phase.phase} style={{ paddingTop: 4 }}>
+              <div style={{ fontSize: 14, fontWeight: 700, color: TOKENS.accent, marginBottom: 6 }}>
+                {phase.phase}
+              </div>
+              <div style={{ fontSize: 14, color: TOKENS.text1, lineHeight: 1.7 }}>
+                {phase.description}
+              </div>
+            </div>
+          ))}
+        </div>
       </Card>
     </div>
   );

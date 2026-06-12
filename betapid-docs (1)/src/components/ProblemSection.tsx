@@ -5,8 +5,8 @@ import { Card } from './Card';
 export function ProblemSection() {
   const painPoints = [
     { icon: "🚧", title: "Builders blocked", desc: "Non-coders can't ship without hiring devs" },
-    { icon: "⏱️", title: "Dev time wasted", desc: "Engineers repeat boilerplate instead of building" },
-    { icon: "🔌", title: "IoT fragmented", desc: "No unified tool for hardware + software automation" },
+    { icon: "⏱️", title: "Developers lose momentum", desc: "Context switching between coding, deployment, and infrastructure slows delivery." },
+    { icon: "🔌", title: "Industrial systems stay disconnected", desc: "Devices, automation, and monitoring operate across fragmented platforms." },
   ];
 
   return (
@@ -19,7 +19,7 @@ export function ProblemSection() {
         marginBottom: 16,
         letterSpacing: "-0.02em",
       }}>
-        Building is still broken for most people.
+        Building digital products is still fragmented.
       </h2>
       <Card glow>
         <p style={{ fontSize: 15, lineHeight: 1.75, color: TOKENS.text1, margin: 0 }}>
@@ -28,7 +28,7 @@ export function ProblemSection() {
       </Card>
       <div style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr",
+        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
         gap: 12,
         marginTop: 16,
       }}>

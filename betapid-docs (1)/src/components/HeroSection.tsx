@@ -6,8 +6,8 @@ export function HeroSection() {
   const stats = [
     { label: "Core Features", value: "3 Live" },
     { label: "AI Models", value: "3" },
-    { label: "Stack Layers", value: "5" },
-    { label: "Target Launch", value: "Q3 2025" },
+  
+    { label: "Target Launch", value: "2026" },
   ];
 
   const tags = ["Next.js 15", "Convex", "Inngest", "Clerk", "AI SDK", "Firecrawl", "WebContainers"];

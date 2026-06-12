@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { TOKENS, NAV_SECTIONS } from '@/data/content';
+import { useState } from 'react';
+import { TOKENS } from '@/data/content';
 import { TopBar } from '@/components/TopBar';
-import { Sidebar } from '@/components/Sidebar';
 import { HeroSection } from '@/components/HeroSection';
 import { ProblemSection } from '@/components/ProblemSection';
 import { SolutionSection } from '@/components/SolutionSection';
@@ -25,32 +24,7 @@ function Section({ id, children }: { id: string; children: React.ReactNode }) {
 }
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("hero");
   const [search, setSearch] = useState("");
-  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
-
-  // Scroll spy
-  useEffect(() => {
-    const handler = () => {
-      for (const { id } of [...NAV_SECTIONS].reverse()) {
-        const el = sectionRefs.current[id];
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActiveSection(id);
-          break;
-        }
-      }
-    };
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
-
-  const scrollTo = useCallback((id: string) => {
-    sectionRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
-  const setRef = useCallback((id: string) => (el: HTMLElement | null) => {
-    sectionRefs.current[id] = el;
-  }, []);
 
   return (
     <div style={{
@@ -61,30 +35,26 @@ export default function App() {
     }}>
       <TopBar search={search} onSearchChange={setSearch} />
 
-      <div style={{ display: "flex", paddingTop: 56 }}>
-        <Sidebar activeSection={activeSection} onNavigate={scrollTo} />
-
-        <main style={{
-          marginLeft: 200,
-          flex: 1,
-          padding: "40px 48px 80px",
-          maxWidth: 860,
-        }}>
-          <Section id="hero"><HeroSection /></Section>
-          <Section id="problem"><ProblemSection /></Section>
-          <Section id="solution"><SolutionSection /></Section>
-          <Section id="features"><FeaturesSection search={search} /></Section>
-          <Section id="market"><MarketSection /></Section>
-          <Section id="business"><BusinessSection /></Section>
-          <Section id="architecture"><ArchitectureSection /></Section>
-          <Section id="stack"><StackSection /></Section>
-          <Section id="api"><ApiSection /></Section>
-          <Section id="roadmap"><RoadmapSection /></Section>
-          <Section id="team"><TeamSection /></Section>
-          <Section id="changelog"><ChangelogSection /></Section>
-          <Footer />
-        </main>
-      </div>
+      <main style={{
+        flex: 1,
+        padding: "104px 48px 80px",
+        maxWidth: 860,
+        margin: "0 auto",
+      }}>
+        <Section id="hero"><HeroSection /></Section>
+        <Section id="problem"><ProblemSection /></Section>
+        <Section id="solution"><SolutionSection /></Section>
+        <Section id="features"><FeaturesSection search={search} /></Section>
+        <Section id="market"><MarketSection /></Section>
+        <Section id="business"><BusinessSection /></Section>
+        <Section id="architecture"><ArchitectureSection /></Section>
+        <Section id="stack"><StackSection /></Section>
+        <Section id="api"><ApiSection /></Section>
+        <Section id="roadmap"><RoadmapSection /></Section>
+        <Section id="team"><TeamSection /></Section>
+        <Section id="changelog"><ChangelogSection /></Section>
+        <Footer />
+      </main>
     </div>
   );
 }

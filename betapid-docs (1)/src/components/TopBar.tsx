@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { TOKENS } from '@/data/content';
 import { Badge } from './Badge';
 
@@ -9,7 +8,7 @@ interface TopBarProps {
 
 export function TopBar({ search, onSearchChange }: TopBarProps) {
   return (
-    <header style={{
+    <header className="topbar" style={{
       position: "fixed",
       top: 0,
       left: 0,
@@ -22,9 +21,11 @@ export function TopBar({ search, onSearchChange }: TopBarProps) {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "0 24px",
+      flexWrap: "wrap",
+      gap: 12,
+      padding: "0 16px",
     }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
         <span style={{ fontSize: 17, fontWeight: 800, color: TOKENS.text0, letterSpacing: "-0.02em" }}>
           Beta<span style={{ color: TOKENS.accent }}>PID</span>
         </span>
@@ -42,6 +43,7 @@ export function TopBar({ search, onSearchChange }: TopBarProps) {
         value={search}
         onChange={e => onSearchChange(e.target.value)}
         placeholder="Search docs…"
+        className="topbar-search"
         style={{
           padding: "6px 12px",
           borderRadius: 8,
@@ -49,8 +51,9 @@ export function TopBar({ search, onSearchChange }: TopBarProps) {
           background: TOKENS.bg1,
           color: TOKENS.text0,
           fontSize: 13,
-          width: 200,
+          width: "min(220px, 100%)",
           outline: "none",
+          minWidth: 0,
         }}
       />
     </header>

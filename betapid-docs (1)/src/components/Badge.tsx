@@ -1,4 +1,3 @@
-import { TOKENS } from '@/data/content';
 import type { Feature } from '@/types';
 
 interface BadgeProps {

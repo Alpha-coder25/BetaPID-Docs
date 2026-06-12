@@ -31,15 +31,15 @@ export const CONTENT = {
     {
       name: "Hasib",
       role: "Founder & CEO",
-      email: "founder@betapid.com",
+      email: "betapidai@gmail.com",
       bio: "EEE engineer, embedded systems & IoT researcher, serial entrepreneur. Founder of Incutech Systems & Aloron Projukti.",
       avatar: null,
     },
   ] as TeamMember[],
   pitch: {
-    problem: "Building software still requires either deep technical expertise or expensive dev teams. Non-technical founders get stuck; developers waste time on boilerplate. Industrial automation is fragmented across legacy tools. There is no single platform that serves both worlds.",
-    solution: "BetaPID is a zero-to-deployment platform. Non-coders get an AI-driven website builder. Developers get a full WebContainer IDE with AI pair programming. Industrial teams get IoT device management and automation workflow orchestration — all under one roof.",
-    whyNow: "WebContainer technology is now production-ready. AI SDK tooling enables seamless multi-model agent orchestration. Real-time backend infrastructure (Convex) eliminates polling complexity. The cost of compute for AI generation has dropped 10× in 24 months. The moment is now.",
+    problem: "Entrepreneurs juggle no-code tools, developers switch between IDEs and deployment platforms, and industrial teams rely on disconnected IoT systems. Building and operating products still requires stitching together dozens of tools. Non-technical founders get stuck; developers waste time on boilerplate. Industrial automation is fragmented across legacy tools. There is no single platform that serves both worlds.",
+    solution: "Betapid brings AI creation, professional development, deployment, and industrial automation into a single workspace. Non-coders get an AI-driven website builder. Developers get a full WebContainer IDE with AI pair programming. Industrial teams get IoT device management and automation workflow orchestration — all under one roof.",
+    whyNow: "AI has changed how software is created. Browser-based infrastructure has removed setup barriers. The cost of intelligence is rapidly falling, making it possible for a single platform to empower founders, developers, and industrial operators alike. Betapid arrives at the exact moment these technologies converge.",
     market: {
       tam: "$650B",
       sam: "$42B",
@@ -48,8 +48,8 @@ export const CONTENT = {
     },
     businessModel: [
       { tier: "Free", price: "$0/mo", features: "3 projects, community templates, basic AI" },
-      { tier: "Starter", price: "$19/mo", features: "10 projects, custom domain, AI builder" },
-      { tier: "Pro", price: "$49/mo", features: "Unlimited projects, IoT devices, workflows" },
+      { tier: "Starter", price: "$10/mo", features: "10 projects, custom domain, AI builder" },
+      { tier: "Pro", price: "$25/mo", features: "Unlimited projects, IoT devices, workflows" },
       { tier: "Enterprise", price: "Custom", features: "White-label, dedicated infra, SLA" },
     ] as BusinessTier[],
     traction: [
@@ -64,14 +64,28 @@ export const CONTENT = {
       { name: "Zapier", strength: "Workflow automation", gap: "No builder, no IoT layer" },
       { name: "BetaPID", strength: "All three unified", gap: "—", isUs: true },
     ] as Competitor[],
-    gtm: "Phase 1: University tech communities + maker spaces (Bangladesh, SEA). Phase 2: Startup accelerators + IoT hardware companies. Phase 3: Enterprise industrial automation (ASEAN, MENA).",
-    vision: "A world where any person — from a Dhaka street vendor to a Munich engineer — can build, deploy, and automate their ideas without barriers. BetaPID is the operating system for makers.",
+    gtm: [
+      {
+        phase: "Phase 1 — Developer & Creator Adoption",
+        description: "Acquire early users through developer communities, university innovation programs, hackathons, and strategic partnerships across Bangladesh and Southeast Asia. Focus on validating product-market fit and building an engaged user base.",
+      },
+      {
+        phase: "Phase 2 — Startup Ecosystem Expansion",
+        description: "Partner with startup accelerators, incubators, and digital agencies to position Betapid as the preferred platform for AI-powered product development and deployment.",
+      },
+      {
+        phase: "Phase 3 — Enterprise & Industrial Growth",
+        description: "Expand into enterprise and industrial markets through collaborations with IoT hardware providers, system integrators, and regional channel partners, enabling large-scale automation and connected operations.",
+      },
+    ],
+    vision:
+      "A world where any person — from a Dhaka street vendor to a Munich engineer — can build, deploy, and automate their ideas without barriers. Betapid is the operating system for makers.",
   },
   features: [
     { name: "AI Website Builder", status: "live", category: "Core", desc: "Drag-drop + AI prompt → full site in minutes" },
     { name: "WebContainer IDE", status: "live", category: "Core", desc: "In-browser Node.js execution, no setup" },
     { name: "IoT Device Manager", status: "live", category: "IoT", desc: "Connect, monitor, control hardware devices" },
-    { name: "Automation Workflows", status: "live", category: "Automation", desc: "Visual workflow builder powered by Inngest" },
+    { name: "Automation Workflows", status: "beta", category: "Automation", desc: "Visual workflow builder powered by Inngest" },
     { name: "AI Agent Orchestration", status: "beta", category: "AI", desc: "Multi-agent task delegation via AI SDK" },
     { name: "Firecrawl Web Scraping", status: "beta", category: "Data", desc: "Structured data extraction for AI context" },
     { name: "Template Marketplace", status: "upcoming", category: "Platform", desc: "Buy/sell project templates" },
@@ -83,7 +97,7 @@ export const CONTENT = {
     backend: ["Convex (real-time BaaS)", "Inngest (event-driven workflows)", "Clerk (auth + RBAC)"],
     ai: ["Vercel AI SDK", "OpenAI GPT-4o", "Anthropic Claude", "Firecrawl (web data)"],
     infra: ["Vercel (edge deployment)", "WebContainers API", "Convex Cloud", "Cloudflare CDN"],
-    devtools: ["TypeScript", "ESLint", "Prettier", "Vitest"],
+    devtools: ["TypeScript", "Next.js", "ESLint", "Prettier", "Vitest"],
   },
   apis: [
     { name: "POST /api/ai/generate", auth: "Clerk JWT", desc: "AI content/code generation" },
@@ -93,15 +107,15 @@ export const CONTENT = {
     { name: "POST /api/scrape", auth: "Clerk JWT", desc: "Firecrawl web extraction" },
   ] as ApiEndpoint[],
   roadmap: [
-    { phase: "Q2 2025", label: "Now", items: ["AI Builder v1", "WebContainer IDE", "IoT Dashboard", "Workflow engine"], done: true },
-    { phase: "Q3 2025", label: "Next", items: ["Agent marketplace", "Mobile PWA", "Template store", "Analytics v1"], done: false },
-    { phase: "Q4 2025", label: "Soon", items: ["White-label", "Enterprise SSO", "API gateway", "Multi-region"], done: false },
-    { phase: "2026", label: "Vision", items: ["BetaPID OS", "Hardware SDK", "Global maker network", "IPO-readiness"], done: false },
+    { phase: "Q2 2026", label: "Now", items: ["AI Builder v1", "WebContainer IDE", "IoT Dashboard", "Workflow engine"], done: true },
+    { phase: "Q3 2026", label: "Next", items: ["Agent marketplace", "Mobile PWA", "Template store", "Analytics v1"], done: false },
+    { phase: "Q4 2026", label: "Soon", items: ["White-label", "Enterprise SSO", "API gateway", "Multi-region"], done: false },
+    { phase: "2027", label: "Vision", items: ["BetaPID OS", "Hardware SDK", "Global maker network", "IPO-readiness"], done: false },
   ] as RoadmapPhase[],
   changelog: [
-    { version: "v0.1.0-beta", date: "2025-06-10", notes: "Initial beta release. AI builder, WebContainer IDE, IoT manager, workflow engine." },
-    { version: "v0.0.5-alpha", date: "2025-05-01", notes: "Core infrastructure. Convex schema, Clerk auth, Inngest integration." },
-    { version: "v0.0.1-alpha", date: "2025-03-15", notes: "Project inception. Tech stack finalized." },
+    { version: "v0.1.0-beta", date: "2026-06-10", notes: "Initial beta release. AI builder, WebContainer IDE, IoT manager, workflow engine." },
+    { version: "v0.0.5-alpha", date: "2026-05-01", notes: "Core infrastructure. Convex schema, Clerk auth, Inngest integration." },
+    { version: "v0.0.1-alpha", date: "2026-03-15", notes: "Project inception. Tech stack finalized." },
   ] as ChangelogEntry[],
 } as const;
 

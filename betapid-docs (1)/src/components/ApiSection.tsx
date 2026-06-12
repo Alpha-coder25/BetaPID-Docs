@@ -25,7 +25,8 @@ export function ApiSection() {
         Endpoints &amp; Auth.
       </h2>
       <p style={{ fontSize: 14, color: TOKENS.text2, marginBottom: 16 }}>
-        All endpoints require a valid Clerk JWT unless otherwise noted. Base URL:{" "}
+        All endpoints require a valid Clerk JWT unless otherwise noted.
+         {/* Base URL:{" "}
         <code style={{
           color: TOKENS.accentSoft,
           background: TOKENS.bg2,
@@ -33,7 +34,7 @@ export function ApiSection() {
           borderRadius: 4,
         }}>
           https://api.betapid.com
-        </code>
+        </code> */}
       </p>
       <div style={{ display: "grid", gap: 8 }}>
         {CONTENT.apis.map(a => (
